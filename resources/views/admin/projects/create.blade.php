@@ -40,6 +40,14 @@
                         <div class="text-danger fw-semibold">{{ $message }}</div>
                     @enderror
                 </div>
+                <div class="mb-3">
+                    <select name="type_id" id="type_id" class="form-select">
+                        <option value="">Seleziona il tipo di progetto</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="d-flex justify-content-center mb-5">
                     <button type="submit" class="btn btn-primary px-5 fs-4">Crea il tuo Progetto!</button>
                 </div>

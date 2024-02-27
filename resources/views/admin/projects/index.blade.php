@@ -14,6 +14,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Titolo</th>
+                        <th>Tipo</th>
                         <th>Descrizione</th>
                         <th>Slug</th>
                         <th>TOOLS</th>
@@ -24,6 +25,7 @@
                         <tr>
                             <td class="fw-bold">{{ $project->id }}</td>
                             <td class="text-capitalize">{{ $project->title }}</td>
+                            <td>{{ $project->type != null ? $project->type->name : 'Non assegnato' }}</td>
                             <td>{{ Str::limit($project->description, 20, '...') }}</td>
                             <td>{{ $project->slug }}</td>
                             <td>
