@@ -1,0 +1,17 @@
+// IMPORTO BOOTSTRAP
+@import '~bootstrap/scss/bootstrap';
+
+// IMPORTO IL FONT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// REGOLE CSS GENERALI
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// BODY
+body {
+    font-family: 'Montserrat', sans-serif;
+}
