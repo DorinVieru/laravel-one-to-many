@@ -41,12 +41,15 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <select name="type_id" id="type_id" class="form-select">
+                    <select name="type_id" id="type_id" class="form-select @error ('type_id') is-invalid @enderror">
                         <option value="">Seleziona il tipo di progetto</option>
                         @foreach ($types as $type)
-                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                            <option value="{{ $type->id }}" @selected($type->id == old('type_id'))>{{ $type->name }}>{{ $type->name }}</option>
                         @endforeach
                     </select>
+                    @error ('type_id')
+                        <div class="text-danger fw-semibold">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="d-flex justify-content-center mb-5">
                     <button type="submit" class="btn btn-primary px-5 fs-4">Crea il tuo Progetto!</button>

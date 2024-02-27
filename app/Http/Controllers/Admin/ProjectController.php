@@ -97,7 +97,9 @@ class ProjectController extends Controller
             $error_message = $messages['error_message'];
         }
 
-        return view('admin.projects.edit', compact('project', 'error_message'));
+        $types = Type::all();
+
+        return view('admin.projects.edit', compact('project', 'types', 'error_message'));
     }
 
     /**

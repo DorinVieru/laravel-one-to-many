@@ -10,7 +10,8 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="fw-bold text-capitalize">{{ $project->title }}</h1>
-                <p class="fs-6">{{ $project->slug }}</p>  
+                <h5>Tipo di progetto: {{ $project->type != null ? $project->type->name : 'Non assegnato' }}</h5>
+                <p class="fs-6">Slug: {{ $project->slug }}</p>
             </div>
             <div class="col-12 mt-5">
                 <p>{{ $project->description }}</p>

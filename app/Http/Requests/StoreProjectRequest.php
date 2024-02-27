@@ -27,6 +27,7 @@ class StoreProjectRequest extends FormRequest
             'title' => 'required|max:150|min:2',
             'description' => 'required|min:5',
             'cover_image' => 'nullable|image|max:1024',
+            'type_id' => 'nullable|exists:types,id',
         ];
     }
 
@@ -40,6 +41,7 @@ class StoreProjectRequest extends FormRequest
             'description.required' => 'La descrizione è obbligatoria.',
             'cover_image.image' => 'Il file selezionato deve essere una immagine in formato valido (.jph, .jpeg, .webp, .png)',
             'cover_image.max' => 'Il file selezionato supera le dimensioni massime di 1024 Kb. Riprova.',
+            'type_id.exists' => 'Seleziona un tipo di progetto valido. Il progetto inserito non esiste.',
         ];
     }
 }
