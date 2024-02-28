@@ -29,14 +29,14 @@
                 @method('PUT')
 
                 <div class="mb-3">
-                    <label for="type_id" class="control-label">Titolo</label>
+                    <label for="title" class="control-label">Titolo</label>
                     <input type="text" name="title" class="form-control @error ('title') is-invalid @enderror" id="title" placeholder="Titolo" required value="{{ old('title') ?? $project->title }}">
                     @error ('title')
                         <div class="text-danger fw-semibold">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="type_id" class="control-label">Descrizione</label>
+                    <label for="description" class="control-label">Descrizione</label>
                     <textarea name="description" class="form-control @error ('description') is-invalid @enderror" id="description" rows="5" placeholder="Descrizione" required>{{ old('description') ?? $project->description }}</textarea>
                     @error ('description')
                         <div class="text-danger fw-semibold">{{ $message }}</div>

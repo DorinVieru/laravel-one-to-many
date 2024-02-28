@@ -49,7 +49,7 @@ class ProjectController extends Controller
     {
         $form_projects = $request->all();
 
-        // CREO LA NUOVA ISTANZA PER COMICS PER SALVARLO NEL DATABASE
+        // CREO LA NUOVA ISTANZA PER PROJECT PER SALVARLO NEL DATABASE
         $project = new Project();
 
         // VERIFICO SE LA RICHIESTA CONTIENE IL CAMPO cover_image
@@ -113,9 +113,9 @@ class ProjectController extends Controller
     {
         $form_projects = $request->all();
 
-        // Creare una query per la modifica di un post con lo stesso titolo
+        // Creare una query per la modifica di un progetto con lo stesso titolo
         $exists = Project::where('title', 'LIKE', $form_projects['title'])->where('id', '!=', $project->id)->get();
-        // Condizione che mi permette di modificare un post mantenendo lo stesso titolo. Ma se cambio titolo e ne inserisco uno già presente in un altro progetto, mi mostra l'errore impostato.
+        // Condizione che mi permette di modificare un progetto mantenendo lo stesso titolo. Ma se cambio titolo e ne inserisco uno già presente in un altro progetto, mi mostra l'errore impostato.
         if(count($exists) > 0) {
             $error_message = 'Hai inserito un titolo già presente in un altro progetto.';
             return redirect()->route('admin.projects.edit', compact('project', 'error_message'));
