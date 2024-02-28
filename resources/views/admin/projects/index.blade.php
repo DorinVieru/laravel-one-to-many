@@ -31,9 +31,9 @@
                             <td>
                                 <div class="d-flex">
                                     {{-- VIEW BUTTON --}}
-                                    <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}" class="btn btn-sm square btn-primary"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}" class="btn btn-sm square btn-primary" title="Visualizza il progetto"><i class="fas fa-eye"></i></a>
                                     {{-- EDIT BUTTON --}}
-                                    <a href="{{ route('admin.projects.edit', ['project' => $project->id]) }}" class="btn btn-sm square btn-warning mx-2"><i class="fas fa-edit"></i></a>
+                                    <a href="{{ route('admin.projects.edit', ['project' => $project->id]) }}" class="btn btn-sm square btn-warning mx-2" title="Modifica il progetto"><i class="fas fa-edit"></i></a>
                                     {{-- DELETE BUTTON --}}
                                     {{-- <form action="{{ route('admin.projects.destroy', ['project' => $project->id]) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare {{ $project->title }}?')">
                                         @csrf
@@ -42,7 +42,7 @@
                                     </form> --}}
 
                                     {{-- MODALE --}}
-                                    <button class="btn btn-sm square btn-danger" data-bs-toggle="modal" data-bs-target="#modal_project_delete-{{ $project->id }}"><i class="fas fa-trash"></i></button> 
+                                    <button class="btn btn-sm square btn-danger" data-bs-toggle="modal" data-bs-target="#modal_project_delete-{{ $project->id }}" title="Elimina il progetto"><i class="fas fa-trash"></i></button> 
                                 </div>
                             </td>
                         </tr>

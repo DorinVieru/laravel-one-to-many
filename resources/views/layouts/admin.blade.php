@@ -33,10 +33,13 @@
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 {{ Route::currentRouteName() }}
-                                <a href="{{ route('admin.dashboard') }}" class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary rounded-2' : '' }}">Dashboard</a>
+                                <a href="{{ route('admin.dashboard') }}" class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary rounded-2' : '' }}"><i class="fa-solid fa-tachometer-alt"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('admin.projects.index') }}" class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' ? 'bg-secondary rounded-2' : '' }}">Projects</a>
+                                <a href="{{ route('admin.projects.index') }}" class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' ? 'bg-secondary rounded-2' : '' }}"><i class="fa-solid fa-newspaper"></i> Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.types.index') }}" class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary rounded-2' : '' }}"> <i class="fa-solid fa-folder"></i> Types</a>
                             </li>
                         </ul>
                     </div>

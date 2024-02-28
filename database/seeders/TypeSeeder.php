@@ -19,7 +19,7 @@ class TypeSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 25; $i++) {
+        for ($i = 0; $i < 7; $i++) {
             $type = new Type();
             $type->name = $faker->words(2, true);
             $type->slug = Str::slug($type->name, '-');

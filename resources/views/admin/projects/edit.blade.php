@@ -29,12 +29,14 @@
                 @method('PUT')
 
                 <div class="mb-3">
+                    <label for="type_id" class="control-label">Titolo</label>
                     <input type="text" name="title" class="form-control @error ('title') is-invalid @enderror" id="title" placeholder="Titolo" required value="{{ old('title') ?? $project->title }}">
                     @error ('title')
                         <div class="text-danger fw-semibold">{{ $message }}</div>
                     @enderror
                 </div>
-                    <div class="mb-3">
+                <div class="mb-3">
+                    <label for="type_id" class="control-label">Descrizione</label>
                     <textarea name="description" class="form-control @error ('description') is-invalid @enderror" id="description" rows="5" placeholder="Descrizione" required>{{ old('description') ?? $project->description }}</textarea>
                     @error ('description')
                         <div class="text-danger fw-semibold">{{ $message }}</div>
@@ -53,8 +55,9 @@
                     @enderror
                 </div>
                 <div class="mb-3">
+                    <label for="type_id" class="control-label">Seleziona la tipologia di progetto</label>
                     <select name="type_id" id="type_id" class="form-select @error ('type_id') is-invalid @enderror">
-                        <option value="">Seleziona il tipo di progetto</option>
+                        <option value="">Non assegnato</option>
                         @foreach ($types as $type)
                             <option value="{{ $type->id }}" @selected($type->id == old('type_id', $project->type ? $project->type->id : '' ))>{{ $type->name }}</option>
                         @endforeach

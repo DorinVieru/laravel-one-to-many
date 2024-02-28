@@ -18,7 +18,8 @@
                     @endif
 
                     {{ __('Sei loggato, complimenti!') }}
-                    <p class="pt-3">Nella sezione <a href="{{ route('admin.projects.index') }}"><strong>Projects</strong></a> puoi visionare tutti i tuoi progetti, aggiungerne di nuovi ed eliminare quelli che non ti servono più! <br> Bello, vero?</p>
+                    <p class="pt-3">Nella tabella <a href="{{ route('admin.projects.index') }}"><strong>Projects</strong></a> puoi visionare tutti i tuoi progetti, aggiungerne di nuovi ed eliminare quelli che non ti servono più! <br> Bello, vero?</p>
+                    <p>Nella tabella <a href="{{ route('admin.types.index') }}"><strong>Types</strong></a> puoi visionare tutte le tipologie di progetto.
                 </div>
             </div>
         </div>
